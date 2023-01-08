@@ -1,0 +1,52 @@
+.root {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 10px 20px 10px;
+  border-bottom: 1px solid rgba(0, 0, 0, .5);
+  box-shadow: 15px 15px 30px rgb(0 0 0 / 15%);
+  width: 100%;
+
+}
+
+.title {
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.info {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.description {
+  margin-top: 5pt;
+  font-size: 13px;
+}
+
+.state {
+  display: flex;
+  align-items: center;
+  column-gap: 20px;
+}
+
+.inner {
+  display: flex;
+  align-items: center;
+  column-gap: 15px;
+}
+
+.hover {
+  transition: all .3s;
+
+  &:hover {
+    cursor: pointer;
+    opacity: .5
+  }
+}
+
+.input{
+  margin-top: 15px!important;
+}
