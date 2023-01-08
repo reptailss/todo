@@ -9,8 +9,13 @@ import AddTodo from "./components/addTodo/AddTodo";
 
 import styles from './styles.module.scss'
 import Pagination from "./components/pagination/Pagination";
+import {useAppSelector} from "./hooks/redux";
 
 function App() {
+
+    const {searchValue, allTodoData} = useAppSelector(state => state.todo);
+
+
     return (
         <>
             <Header/>
@@ -18,12 +23,14 @@ function App() {
 
                 <SnackBars/>
                 <Alert/>
-                <Pagination/>
+
                 <div className={styles.inner}>
 
                     <AddTodo/>
                     <TodoList/>
                 </div>
+
+                {!searchValue && allTodoData && <Pagination/>}
             </div>
         </>
 
